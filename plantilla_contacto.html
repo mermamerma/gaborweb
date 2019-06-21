@@ -1,21 +1,12 @@
-<?php
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin t&iacute;tulo</title>
+</head>
 
-#ini_set( 'allow_url_fopen', 1 );
-$ip     =  '190.76.127.210';
-
-#$ip        = $_SERVER['REMOTE_ADDR'];
-#$equipo     = $_SERVER['REMOTE_HOST'];
-$meta       = (unserialize(@file_get_contents("http://www.geoplugin.net/php.gp?ip={$ip}")));
-$pais       = @$meta["geoplugin_countryName"] ;
-$ciudad     = @$meta["geoplugin_timezone"];
-
-#
-var_dump($meta);
-
-$userInfo   = $_SERVER['HTTP_USER_AGENT'];
-
-$html = <<< EOT
-<table width="46%" height="194" border="0">
+<body>
+<table width="46%" height="250" border="0">
   <tr>
     <td colspan="2" bgcolor="#0ea45d" style=""><div align="center"><span style="color: #FFFFFF;	font-weight: bold;">Información de Contácto desde</span> 
 	<a href="gabor.com.ve" style="background-color:#FFFFFF">gabor.com.ve</a> </div></td>
@@ -30,11 +21,11 @@ $html = <<< EOT
   </tr>
   <tr>
     <td><strong>Teléfono Local:</strong></td>
-    <td>&nbsp;</td>
+    <td><a href="tel:04265302318">0244-3218191</a></td>
   </tr>
   <tr bgcolor="#F3F3F3">
     <td><strong>Teléfono Celuar: </strong></td>
-    <td>&nbsp;</td>
+    <td><a href="tel:04265302318">0426-5302318</a></td>
   </tr>
   <tr>
     <td><strong>WhatsApp: </strong></td>
@@ -49,15 +40,10 @@ $html = <<< EOT
     <td><strong>Host Info: </strong></td>
     <td>&nbsp;</td>
   </tr>
-  
-  <tr>
-    <td colspan="2"><div align="center"><strong>Mensaje</strong></div></td>
-  </tr>
-  <tr>
-    <td colspan="2">dfdfdsfdsfdsfdsfds</td>
+  <tr  bgcolor="#F3F3F3">
+    <td><strong>Mensaje: </strong></td>
+    <td>&nbsp;</td>
   </tr>
 </table>
-        
-EOT;
-
-echo $html;
+</body>
+</html>
